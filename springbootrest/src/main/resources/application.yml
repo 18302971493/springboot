@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: service-rest
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url:  jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123qwe
+    driverClassName:  com.mysql.jdbc.Driver
+    initialSize:  5
+    minIdle:  5
+    maxActive:  20
+  jpa:
+    properties:
+      hibernate:
+        dialect:  org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+  data:
+    rest:
+      base-path:  /api
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://127.0.0.1:8761/eureka/
