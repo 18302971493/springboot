@@ -1,6 +1,5 @@
 package com.ytain.springboot.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -15,7 +14,7 @@ public class SpringbootClientConfigApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootClientConfigApplication.class, args);
 	}
-	@Value("${message}")
+	
     String message;
     @RequestMapping(value = "/hi")
     public String hi(){
